@@ -1,25 +1,32 @@
 package com.devnuta.firstapp;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 
 @Component
 @Scope("prototype")
 public class Boy {
 
-  @Autowired
-  private ObjectMapper objectMapper;
-
-  public void useObjectMapper() {
-    // use objectMapper
-    System.out.println("objectMapper: " + objectMapper);
+  public Boy() {
+    System.out.println("Boy is initiated ");
   }
   
-  public void setObjectMapper(ObjectMapper objectMapper) {
-    this.objectMapper = objectMapper;
+  @PostConstruct
+  public void HelloBoy() {
+    System.out.println("Hello Boy ! ");
   }
+
+  @PreDestroy
+  public void ByeBoy() {
+    System.out.println("Bye Boy ! ");
+  }
+
+  public void UseBoy() {
+    System.out.println("Use Boy ! ");
+  }
+
 
 }
