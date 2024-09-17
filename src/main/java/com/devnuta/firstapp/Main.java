@@ -11,11 +11,16 @@ public class Main {
 
 		ApplicationContext context = SpringApplication.run(Main.class, args);
 		
-		String[] beans = context.getBeanDefinitionNames();
-		for(String bean: beans)
-		{
-			System.out.println(bean);
-		}
+		// String[] beans = context.getBeanDefinitionNames();
+		// for(String bean: beans)
+		// {
+		// 	System.out.println(bean);
+		// }
+
+		Client client = context.getBean(Client.class);
+		
+		client.processMessage("Hi, DevNuta");
+
 
 		
 	}
