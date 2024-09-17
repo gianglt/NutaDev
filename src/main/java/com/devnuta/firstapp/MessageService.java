@@ -1,4 +1,5 @@
 package com.devnuta.firstapp;
 
-public class MessageService {
+public interface MessageService {
+    void sendMessage(String message);
 }

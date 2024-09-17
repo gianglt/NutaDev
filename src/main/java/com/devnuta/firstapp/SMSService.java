@@ -1,6 +1,6 @@
 package com.devnuta.firstapp;
 
-public class SMSService {
+public class SMSService implements MessageService{
     public void sendMessage(String message)
     {
         System.out.println("Send SMS: " + message);

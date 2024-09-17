@@ -1,7 +1,13 @@
 package com.devnuta.firstapp;
 
 public class Client {
-    private EmailService messageService = new EmailService();
+
+    private MessageService messageService;
+
+    public Client(MessageService messageService)
+    {
+        this.messageService = messageService;
+    }
 
     public void processMessage(String message)
     {
