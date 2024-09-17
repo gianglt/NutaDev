@@ -11,13 +11,12 @@ public class Main {
 
 		ApplicationContext context = SpringApplication.run(Main.class, args);
 		
-		Boy boy1 = context.getBean(Boy.class);
-		System.out.println("Boy :" + boy1);
+		String[] beans = context.getBeanDefinitionNames();
+		for(String bean: beans)
+		{
+			System.out.println(bean);
+		}
 
-		Boy boy2 = context.getBean(Boy.class);
-		System.out.println("Boy :" + boy2);
-
-		//boy.useObjectMapper();
 		
 	}
 
