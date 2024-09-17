@@ -12,7 +12,9 @@ public class FirstappApplication {
 		EmailService emailService = new EmailService();
 		SMSService smsService = new SMSService();
 
-		Client client = new Client(emailService);
+		Client client = new Client();
+		client.setService(smsService);
+		//client.setMessageService(smsService);
 		client.processMessage("Hello world !");
 	}
 

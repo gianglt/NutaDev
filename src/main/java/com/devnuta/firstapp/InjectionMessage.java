@@ -1,4 +1,6 @@
 package com.devnuta.firstapp;
 
-public class InjectionMessage {
+public interface InjectionMessage {
+    void setService(MessageService messageService);
+
 }
