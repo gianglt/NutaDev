@@ -10,9 +10,14 @@ public class Main {
 	public static void main(String[] args) {
 
 		ApplicationContext context = SpringApplication.run(Main.class, args);
+		
+		Boy boy1 = context.getBean(Boy.class);
+		System.out.println("Boy :" + boy1);
 
-		Client client = context.getBean(Client.class);
-		client.processMessage("Hello world !");
+		Boy boy2 = context.getBean(Boy.class);
+		System.out.println("Boy :" + boy2);
+
+		//boy.useObjectMapper();
 		
 	}
 
