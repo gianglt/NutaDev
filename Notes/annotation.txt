@@ -1,0 +1,1 @@
+Khai báo @Component để được quản lý bởi SpringBoot, khi cần được lấy ra để sử dụng
