@@ -11,9 +11,9 @@ public class Main {
 
 		ApplicationContext context = SpringApplication.run(Main.class, args);
 
-		EmailService emailService = context.getBean(EmailService.class);
+		Client client = context.getBean(Client.class);
+		client.processMessage("Hello world !");
 		
-		emailService.sendMessage("Hello world !");
 	}
 
 }
