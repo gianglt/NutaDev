@@ -17,7 +17,7 @@ public class Girl {
   private  Boy boy;
 
   public Girl() {
-    System.out.println("Girl is created ");
+    System.out.println("Girl is initiated ");
   }
   
   @PostConstruct
