@@ -1,23 +1,27 @@
 package com.devnuta.firstapp;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+import com.devnuta.firstapp.others.Girl;
+
+//@SpringBootApplication
+//@SpringBootApplication(scanBasePackages={"com.devnuta.firstapp.others"})
+@ComponentScan(basePackages = "com.devnuta.firstapp.others")
 public class Main {
 
 	public static void main(String[] args) {
 
 		ApplicationContext context = SpringApplication.run(Main.class, args);
 		
-		Boy boy1 = context.getBean(Boy.class);
-		System.out.println("Boy :" + boy1);
+		Boy boy = context.getBean(Boy.class);
+		System.out.println("Boy :" + boy);
 
-		Boy boy2 = context.getBean(Boy.class);
-		System.out.println("Boy :" + boy2);
 
-		//boy.useObjectMapper();
+		Girl girl = context.getBean(Girl.class);
+		System.out.println("Girl :" + girl);
+		
 		
 	}
 

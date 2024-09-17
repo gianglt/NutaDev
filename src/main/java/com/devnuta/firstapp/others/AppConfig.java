@@ -1,18 +1,24 @@
-package com.devnuta.firstapp;
+package com.devnuta.firstapp.others;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
+import com.devnuta.firstapp.Boy;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration  
 public class AppConfig {
 
   @Bean
-  @Scope("prototype")
+  
   public Boy  boy() {
     return new Boy();
+  }
+
+  @Bean
+
+  public Girl  girl() {
+    return new Girl();
   }
 
   @Bean
